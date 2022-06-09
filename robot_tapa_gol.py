@@ -52,3 +52,131 @@ def arcoA():
             break
         else:
             print("Ingrese un estado valido para el arco G")
+
+    print("El robot esta en el arco A")
+    if estado_arcoA == '1':
+        print("Futbolista patea el balón hacia el arco A")
+        estado_meta['A'] = '0'
+        costo += 1
+        print("El robot tapa el balón en el arco A")
+        print("Costo del movimiento: ", costo)
+        
+        if estado_arcoB == '1':
+            print("\nFutbolista patea el balón al arco B")
+            print("El robot se mueve al arco B")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['B'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoB == '0':
+            print("\nFutbolista patea el balón al arco B")
+            print("El robot se mueve al arco B")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['B'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        if estado_arcoC == '1':
+            print("\nFutbolista patea el balón al arco C")
+            print("El robot se mueve al arco C")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['C'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoC == '0':
+            print("\nFutbolista patea el balón al arco C")
+            print("El robot se mueve al arco C")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['C'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        if estado_arcoD == '1':
+            print("\nFutbolista patea el balón al arco D")
+            print("El robot se mueve al arco D")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['D'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoD == '0':
+            print("\nFutbolista patea el balón al arco D")
+            print("El robot se mueve al arco D")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['D'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        if estado_arcoE == '1':
+            print("\nFutbolista patea el balón al arco E")
+            print("El robot se mueve al arco E")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['E'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoE == '0':
+            print("\nFutbolista patea el balón al arco E")
+            print("El robot se mueve al arco E")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['E'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        if estado_arcoF == '1':
+            print("\nFutbolista patea el balón al arco F")
+            print("El robot se mueve al arco F")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['F'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoF == '0':
+            print("\nFutbolista patea el balón al arco F")
+            print("El robot se mueve al arco F")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['F'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        if estado_arcoG == '1':
+            print("\nFutbolista patea el balón al arco G")
+            print("El robot se mueve al arco G")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['G'] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+
+        elif estado_arcoG == '0':
+            print("\nFutbolista patea el balón al arco G")
+            print("El robot se mueve al arco G")
+            costo += 1
+            print("Costo del movimiento: ", costo)
+            estado_meta['G'] = '1'
+            costo += 1
+            print("El robot no tapa el balón")
+            print("Costo del movimiento: ", costo)
