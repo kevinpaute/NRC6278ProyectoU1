@@ -312,4 +312,60 @@ def arcoA():
     print("\nEstado de la meta: ")
     print(estado_meta)
     # Imprimir el costo de las acciones realizadas
-    print("Medida de desempeño: " + str(costo)
+    print("Medida de desempeño: " + str(costo))
+
+def arcoB():
+    costo=0
+    while True:
+        estado_arcoB = input("Ingrese el estado del arco B: ")
+        if validar_entrada(estado_arcoB)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco B")
+    while True:
+        estado_arcoA = input("Ingrese el estado del arco A: ")
+        if validar_entrada(estado_arcoA)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco A")
+    while True:
+        estado_arcoC = input("Ingrese el estado del arco C: ")
+        if validar_entrada(estado_arcoC)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco C")
+    while True:
+        estado_arcoD = input("Ingrese el estado del arco D: ")
+        if validar_entrada(estado_arcoD)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco D")
+    while True:
+        estado_arcoE = input("Ingrese el estado del arco E: ")
+        if validar_entrada(estado_arcoE)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco E")
+    while True:
+        estado_arcoF = input("Ingrese el estado del arco F: ")
+        if validar_entrada(estado_arcoF)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco F")
+    while True:
+        estado_arcoG = input("Ingrese el estado del arco G: ")
+        if validar_entrada(estado_arcoG)==True:
+            break
+        else:
+            print("Ingrese un estado valido para el arco G")
+
+    estado_meta = {'A': estado_arcoA, 'B': estado_arcoB, 'C': estado_arcoC, 'D': estado_arcoD, 'E': estado_arcoE, 'F': estado_arcoF, 'G': estado_arcoG}
+       
+
+    print("\nEl robot se mueve al arco B")
+    costo += 1
+    print("Costo del movimiento: ", costo)
+    estado_meta['B'] = '0'
+    costo += 1
+    print("El robot tapa el balón")
+    print("Costo del movimiento: ", costo)
