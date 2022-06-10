@@ -176,7 +176,7 @@ class Grafo:
             print(e)
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     """
     Main de la clase Grafo.
 
@@ -235,6 +235,7 @@ if __name__ == "_main_":
     #Se llama al metodo imprimir_grafo para visualizar el grafo
     grafo.imprimir_grafo()
 
+
     while True:
         try:
             #Permitir que el usuario ingrese solamente el 3, 6,9,15,19,24
@@ -269,4 +270,3 @@ if __name__ == "_main_":
     #Se llama al metodo recorrido_dfs para visualizar el recorrido
     print("\nRecorrido para llegar al restaurante 🍽️: ")
     grafo.recorrido_dfs(nodo_inicio, nodo_objetivo, [])
-
