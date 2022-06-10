@@ -1,139 +1,58 @@
 from validacion_entrada import *
-costo = 0
+
 estado_meta = {'A':'0', 'B':'0', 'C':'0', 'D':'0', 'E':'0', 'F':'0', 'G':'0'}
 lista = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-ubicacion = ''
 
-def arco_accion1(costo, ubicacion, estado_meta):
-    for i in lista:
-        if i == ubicacion:
-            costo = costo + 1
-            ubicacion = i
-            if estado_meta == ubicacion:
-                print("Costo: ", costo)
-                break
-            else:
-                hola(costo, ubicacion, estado_meta)
-
-def hola(costo, ubicacion, estado_meta):
-    estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
+def acciones_por_estado():
+    costo = 0
     while True:
-        if validar_entrada(estado_arco)==True:
-            print("\nFutbolista patea el balón al arco ", ubicacion)
-            print("Costo del movimiento: ", costo)
-            estado_meta[ubicacion] = '0'
-            costo += 1
-            print("El robot tapa el balón")
-            print("Costo del movimiento: ", costo)
-            for i in range(len(lista)):
-                estado_arco = str(input("Ingrese el estado del arco ", lista[i]))
-                while True:
-                    if validar_entrada(estado_arco)==True:
-                        if estado_arco == '1':
-                            print("\nFutbolista patea el balón al arco ", lista[i])
-                            print("Costo del movimiento: ", costo)
-                            estado_meta[lista[i]] = '0'
-                            costo += 1
-                            print("El robot tapa el balón")
-                            print("Costo del movimiento: ", costo)
-                        elif estado_arco == '0':
-                            print("\nFutbolista patea el balón al arco ", lista[i])
-                            print("Costo del movimiento: ", costo)
-                            estado_meta[lista[i]] = '1'
-                            costo += 1
-                            print("El robot no tapa el balón")
-                            print("Costo del movimiento: ", costo)
-                        break
-                    else:
-                        print("\nIngrese una entrada valida")
-            break
-        else:
-            print("\nIngrese una entrada valida")
-            
-
-
-    
-
-
-
-
-def arco_accion2(costo, ubicacion, estado_meta):
-        estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
-        while True:
-            if validar_entrada(estado_arco)==True:
-                if estado_arco == '1':
-                    print("\nFutbolista patea el balón al arco ", ubicacion)
-                    print("El robot se mueve al arco ", ubicacion)
-                    costo += 1
-                    print("Costo del movimiento: ", costo)
+        ubicacion = input("Ingrese la ubicacion del arco: ")
+        if validar_entrada(ubicacion):
+            print("Ingrese el estado del arco", ubicacion)
+            estado_arco=input()
+            while True:
+                if validar_entrada(estado_arco)==True:
+                    print("Futbolista patea el balón al arco ", ubicacion)
                     estado_meta[ubicacion] = '0'
                     costo += 1
                     print("El robot tapa el balón")
                     print("Costo del movimiento: ", costo)
-                elif estado_arco == '0':
-                    print("\nFutbolista patea el balón al arco ", ubicacion)
-                    print("El robot se mueve al arco ", ubicacion)
-                    costo += 1
-                    print("Costo del movimiento: ", costo)
-                    estado_meta[ubicacion] = '1'
-                    costo += 1
-                    print("El robot no tapa el balón")
-                    print("Costo del movimiento: ", costo)
-                break
-            else:
-                print("\nIngrese una entrada valida")
+                    # Un for que no me incluya la lista [A]
+                    for i in range(1,8,1):
+                        if i == ubicacion:
+                            pass
+                        else:
+                            estado_arco = input()
+                            print("\nIngrese el estado del arco ", lista[i])
+                            while True:
+                                if validar_entrada(estado_arco)==True:
+                                    if estado_arco == '1':
+                                        print("\nFutbolista patea el balón al arco ", lista[i])
+                                        print("El robot se mueve al arco ", lista[i])
+                                        costo += 1
+                                        print("Costo del movimiento: ", costo)
+                                        estado_meta[lista[i]] = '0'
+                                        costo += 1
+                                        print("El robot tapa el balón")
+                                        print("Costo del movimiento: ", costo)
+                                    elif estado_arco == '0':
+                                        print("\nFutbolista patea el balón al arco ", lista[i])
+                                        print("El robot se mueve al arco ", lista[i])
+                                        costo += 1
+                                        print("Costo del movimiento: ", costo)
+                                        estado_meta[lista[i]] = '1'
+                                        costo += 1
+                                        print("El robot no tapa el balón")
+                                        print("Costo del movimiento: ", costo)
+                                    break
+                                else:
+                                    print("\nIngrese un estado valida")
+
+                    break
+                else:
+                    print("\nIngrese un estado valida")
+            break
+        else:
+            print("\nIngrese una ubicacion valida")
         
-
-
-def ubicacion_accion1():
-    if ubicacion == 'A':
-        arco_accion1(costo, ubicacion, estado_meta)
-
-def validacion_ubicacion(ubicacion):
-    while True:
-        ubicacion = str(input("Ingrese la ubicacion del arco: "))
-        if validar_entrada_A_G(ubicacion) == True:
-            
-            break
-        else:
-            print("\nIngrese una ubicacion valida")
-
-def arcoA():
-
-    
-    while True:
-        ubicacion = str(input("Ingrese la ubicacion del arco: "))
-        if validar_entrada_A_G(ubicacion) == True:
-            ubicacion = ubicacion.upper()
-            break
-        else:
-            print("\nIngrese una ubicacion valida")
-
-    if ubicacion == 'A':
-        arco_accion1(costo, ubicacion, estado_meta)
-        if ubicacion == 'B':
-            arco_accion2(costo, ubicacion, estado_meta)
-        elif ubicacion == 'C':
-            arco_accion2(costo, ubicacion, estado_meta)
-        elif ubicacion == 'D':
-            arco_accion2(costo, ubicacion, estado_meta)
-        elif ubicacion == 'E':
-            arco_accion2(costo, ubicacion, estado_meta)
-        elif ubicacion == 'F':
-            arco_accion2(costo, ubicacion, estado_meta)
-        elif ubicacion == 'G':
-            arco_accion2(costo, ubicacion, estado_meta)
-
-
-    elif ubicacion == 'B':
-        arco_accion1(costo, ubicacion, estado_meta)
-    elif ubicacion == 'C':
-        arco_accion1(costo, ubicacion, estado_meta)
-    elif ubicacion == 'D':
-        arco_accion1(costo, ubicacion, estado_meta)
-    elif ubicacion == 'E':
-        arco_accion1(costo, ubicacion, estado_meta)
-    elif ubicacion == 'F':
-        arco_accion1(costo, ubicacion, estado_meta)
-    elif ubicacion == 'G':
-        arco_accion1(costo, ubicacion, estado_meta)
+acciones_por_estado()
