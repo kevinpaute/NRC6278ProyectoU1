@@ -6,25 +6,33 @@ lista = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 def acciones_por_estado():
     costo = 0
     while True:
-        ubicacion = input("Ingrese la ubicacion del arco: ")
-        if validar_entrada(ubicacion):
-            print("Ingrese el estado del arco", ubicacion)
-            estado_arco=input()
+        ubicacion = str(input("Ingrese la ubicacion del arco: "))
+        if validar_entrada_A_G(ubicacion):
             while True:
+                print("Ingrese el estado del arco", ubicacion)
+                estado_arco=input()
                 if validar_entrada(estado_arco)==True:
-                    print("Futbolista patea el balón al arco ", ubicacion)
-                    estado_meta[ubicacion] = '0'
-                    costo += 1
-                    print("El robot tapa el balón")
-                    print("Costo del movimiento: ", costo)
-                    # Un for que no me incluya la lista [A]
-                    for i in range(1,8,1):
-                        if i == ubicacion:
+                    if estado_arco == '1':
+                        print("Futbolista patea el balón al arco ", ubicacion)
+                        estado_meta[ubicacion] = '0'
+                        costo += 1
+                        print("El robot tapa el balón")
+                        print("Costo del movimiento: ", costo)
+                    elif estado_arco == '0':
+                        print("Futbolista patea el balón al arco ", ubicacion)
+                        estado_meta[ubicacion] = '1'
+                        costo += 1
+                        print("El robot no tapa el balón")
+                        print("Costo del movimiento: ", costo)
+                    
+                    for i in range(0,7,1):
+                        if ubicacion == lista[i]:
                             pass
-                        else:
-                            estado_arco = input()
-                            print("\nIngrese el estado del arco ", lista[i])
+                        else: 
+
                             while True:
+                                print("\nIngrese el estado del arco ", lista[i])
+                                estado_arco = input()
                                 if validar_entrada(estado_arco)==True:
                                     if estado_arco == '1':
                                         print("\nFutbolista patea el balón al arco ", lista[i])
@@ -46,7 +54,7 @@ def acciones_por_estado():
                                         print("Costo del movimiento: ", costo)
                                     break
                                 else:
-                                    print("\nIngrese un estado valida")
+                                    print("Ingrese un estado valido")
 
                     break
                 else:
@@ -54,5 +62,8 @@ def acciones_por_estado():
             break
         else:
             print("\nIngrese una ubicacion valida")
+
+
+
         
 acciones_por_estado()
