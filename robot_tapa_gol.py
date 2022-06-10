@@ -17,14 +17,45 @@ def arco_accion1(costo, ubicacion, estado_meta):
 
 def hola(costo, ubicacion, estado_meta):
     estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
-    if validar_entrada(estado_arco)==True:
-        print("\nFutbolista patea el balón al arco ", ubicacion)
-        print("Costo del movimiento: ", costo)
-        estado_meta[ubicacion] = '0'
-        costo += 1
-        print("El robot tapa el balón")
-        print("Costo del movimiento: ", costo)
-        
+    while True:
+        if validar_entrada(estado_arco)==True:
+            print("\nFutbolista patea el balón al arco ", ubicacion)
+            print("Costo del movimiento: ", costo)
+            estado_meta[ubicacion] = '0'
+            costo += 1
+            print("El robot tapa el balón")
+            print("Costo del movimiento: ", costo)
+            for i in range(len(lista)):
+                estado_arco = str(input("Ingrese el estado del arco ", lista[i]))
+                while True:
+                    if validar_entrada(estado_arco)==True:
+                        if estado_arco == '1':
+                            print("\nFutbolista patea el balón al arco ", lista[i])
+                            print("Costo del movimiento: ", costo)
+                            estado_meta[lista[i]] = '0'
+                            costo += 1
+                            print("El robot tapa el balón")
+                            print("Costo del movimiento: ", costo)
+                        elif estado_arco == '0':
+                            print("\nFutbolista patea el balón al arco ", lista[i])
+                            print("Costo del movimiento: ", costo)
+                            estado_meta[lista[i]] = '1'
+                            costo += 1
+                            print("El robot no tapa el balón")
+                            print("Costo del movimiento: ", costo)
+                        break
+                    else:
+                        print("\nIngrese una entrada valida")
+            break
+        else:
+            print("\nIngrese una entrada valida")
+            
+
+
+    
+
+
+
 
 def arco_accion2(costo, ubicacion, estado_meta):
         estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
