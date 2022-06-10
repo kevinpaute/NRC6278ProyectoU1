@@ -1,21 +1,30 @@
-#algoritmo agente robot arquero con siete ubicación
-
-#Importar libreria va
 from validacion_entrada import *
 costo = 0
 estado_meta = {'A':'0', 'B':'0', 'C':'0', 'D':'0', 'E':'0', 'F':'0', 'G':'0'}
+lista = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 ubicacion = ''
 
 def arco_accion1(costo, ubicacion, estado_meta):
-        estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
+    for i in lista:
+        if i == ubicacion:
+            costo = costo + 1
+            ubicacion = i
+            if estado_meta == ubicacion:
+                print("Costo: ", costo)
+                break
+            else:
+                hola(costo, ubicacion, estado_meta)
+
+def hola(costo, ubicacion, estado_meta):
+    estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
+    if validar_entrada(estado_arco)==True:
+        print("\nFutbolista patea el balón al arco ", ubicacion)
+        print("Costo del movimiento: ", costo)
+        estado_meta[ubicacion] = '0'
+        costo += 1
+        print("El robot tapa el balón")
+        print("Costo del movimiento: ", costo)
         
-        if validar_entrada(estado_arco)==True:
-            print("\nFutbolista patea el balón al arco ", ubicacion)
-            print("Costo del movimiento: ", costo)
-            estado_meta[ubicacion] = '0'
-            costo += 1
-            print("El robot tapa el balón")
-            print("Costo del movimiento: ", costo)
 
 def arco_accion2(costo, ubicacion, estado_meta):
         estado_arco=input(print("\nIngrese el estado del arco ", ubicacion))
@@ -53,6 +62,7 @@ def validacion_ubicacion(ubicacion):
     while True:
         ubicacion = str(input("Ingrese la ubicacion del arco: "))
         if validar_entrada_A_G(ubicacion) == True:
+            
             break
         else:
             print("\nIngrese una ubicacion valida")
@@ -63,6 +73,7 @@ def arcoA():
     while True:
         ubicacion = str(input("Ingrese la ubicacion del arco: "))
         if validar_entrada_A_G(ubicacion) == True:
+            ubicacion = ubicacion.upper()
             break
         else:
             print("\nIngrese una ubicacion valida")
@@ -71,6 +82,18 @@ def arcoA():
         arco_accion1(costo, ubicacion, estado_meta)
         if ubicacion == 'B':
             arco_accion2(costo, ubicacion, estado_meta)
+        elif ubicacion == 'C':
+            arco_accion2(costo, ubicacion, estado_meta)
+        elif ubicacion == 'D':
+            arco_accion2(costo, ubicacion, estado_meta)
+        elif ubicacion == 'E':
+            arco_accion2(costo, ubicacion, estado_meta)
+        elif ubicacion == 'F':
+            arco_accion2(costo, ubicacion, estado_meta)
+        elif ubicacion == 'G':
+            arco_accion2(costo, ubicacion, estado_meta)
+
+
     elif ubicacion == 'B':
         arco_accion1(costo, ubicacion, estado_meta)
     elif ubicacion == 'C':
