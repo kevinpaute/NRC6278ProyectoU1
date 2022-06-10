@@ -234,3 +234,39 @@ if __name__ == "_main_":
 
     #Se llama al metodo imprimir_grafo para visualizar el grafo
     grafo.imprimir_grafo()
+
+    while True:
+        try:
+            #Permitir que el usuario ingrese solamente el 3, 6,9,15,19,24
+            nodo_inicio = int(input("\n¿Cuál es su ubicacion actual? 🏢\n"))
+            #Permitir que el usuario ingrese solamente el 3, 6,9,15,19,24
+            if nodo_inicio in [3,6,9,15,19,24]:
+                break
+            else:
+                print("\nIngrese su ubicacion valida")
+        #Si se produce un error se imprime en pantalla
+        except Exception as e:
+            print(e)
+            print("Ingrese una opcion valida")
+            continue
+
+    #Preguntar al usuario el nodo objetivo
+    while True:
+        try:
+            nodo_objetivo = int(input("\n¿Cuál es el restaurante que desea? 🍟🍛🍽️\n"))
+            #Si el nodo objetivo no esta entre 3,6,9,15,19,24
+            if nodo_objetivo not in [3,6,9,15,19,24] and nodo_objetivo >= 0 and nodo_objetivo< 26:
+                break
+            #Si el nodo objetivo esta entre 3,6,9,15,19,24
+            else:
+                print("Ingrese una opcion valida")
+                continue
+        #Si se produce un error se imprime en pantalla
+        except Exception as e:
+            print(e)
+            print("Ingrese una opcion valida")
+            continue
+    #Se llama al metodo recorrido_dfs para visualizar el recorrido
+    print("\nRecorrido para llegar al restaurante 🍽️: ")
+    grafo.recorrido_dfs(nodo_inicio, nodo_objetivo, [])
+
