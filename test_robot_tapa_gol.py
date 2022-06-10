@@ -1,4 +1,4 @@
-from hola import robot_tapa_gol
+from robot_tapa_gol import robot_tapa_gol
 import unittest
 
 class TestRobotTapaGol(unittest.TestCase):
