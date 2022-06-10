@@ -1,3 +1,5 @@
+
+ # Se imprime el resultado del robot
 from validacion_entrada import *
 import emoji
 
@@ -91,21 +93,26 @@ def robot_tapa_gol():
                                         print("El robot🤖 se mueve al arco ", arcos[i])
                                         costo += 1
                                         print("Costo del movimiento: ", costo)
+                                        #El estado del arco se pone en 1
                                         estado_meta[arcos[i]] = '1'
                                         costo += 1
+                                        #Imprime mensaje de el robot tape el gol
                                         print("El robot🤖 no tapa el balón⚽")
+                                        #Imprime mensaje de el robot tape el gol
                                         print("El futbolista anota gol 🥇")
                                         print("Costo del movimiento: ", costo)
                                     break
                                 else:
                                     print("Ingrese un estado valido")
-
+                    
                     break
+                #Si el estado no es valido se imprime el mensaje de error
                 else:
                     print("Ingrese un estado valido")
             break
+        #Si el arco no es valido se imprime el mensaje de error
         else:
             print("Ingrese una ubicacion valido")
 
-
+#Llamada al metodo robot_tapa_gol
 robot_tapa_gol()
