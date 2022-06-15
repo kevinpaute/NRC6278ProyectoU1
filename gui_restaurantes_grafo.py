@@ -275,8 +275,6 @@ if __name__ == "__main__":
     17:"El Menestron🍛", 18:"Pizza Hurt🍕", 19:"Municipio🏢",20:"La Cuchara Brava🍲",21:"Legends Food & Drinks 🍟",22:"Super Pollo🍗",
     23:"Papa John's Pizza🍟",24:"Supermercado AKI🏬", 25:"La Pizzeria🍕"}
 
-
-
     #Se instancia la clase Grafo con el diccionario de restaurantes y con dirigido en False
     grafo = Grafo(26, restaurantes, dirigido=False)
 
@@ -318,9 +316,6 @@ if __name__ == "__main__":
     #Se llama al metodo imprimir_grafo para visualizar el grafo
     grafo.imprimir_grafo()
 
-    #Se instancia la clase Aplicacion
-
-
     #Se crea una instancia de la clase QApplication 
     app = QApplication(sys.argv) 
     #Se crea una instancia de la clase Aplicacion
@@ -330,4 +325,3 @@ if __name__ == "__main__":
     #Se ejecuta la aplicacion
     sys.exit(app.exec_())
     
-

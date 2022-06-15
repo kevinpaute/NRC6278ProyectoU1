@@ -112,7 +112,7 @@ def robot_tapa_gol():
             break
         #Si el arco no es valido se imprime el mensaje de error
         else:
-            print("Ingrese una ubicacion valido")
+            print("Ingrese una ubicacion valida")
 
 robot_tapa_gol()
 
