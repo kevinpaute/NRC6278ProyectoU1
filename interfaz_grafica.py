@@ -1,3 +1,4 @@
+
 from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
     QRect, QSize, QUrl, Qt)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
@@ -319,7 +320,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -366,107 +367,107 @@ class Ui_Form(object):
         ___qtablewidgetitem2 = self.tabla_rest.item(0, 0)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"0", None));
         ___qtablewidgetitem3 = self.tabla_rest.item(0, 1)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"McDonald's\ud83c\udf54", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"McDonald's", None));
         ___qtablewidgetitem4 = self.tabla_rest.item(1, 0)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"1", None));
         ___qtablewidgetitem5 = self.tabla_rest.item(1, 1)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("Form", u"Pizzeria El Hornero\ud83c\udf55", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("Form", u"Pizzeria El Hornero", None));
         ___qtablewidgetitem6 = self.tabla_rest.item(2, 0)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("Form", u"2", None));
         ___qtablewidgetitem7 = self.tabla_rest.item(2, 1)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("Form", u"Casa Bamb\u00fa\ud83c\udf71", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("Form", u"Casa Bamb\u00fa", None));
         ___qtablewidgetitem8 = self.tabla_rest.item(3, 0)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("Form", u"3", None));
         ___qtablewidgetitem9 = self.tabla_rest.item(3, 1)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("Form", u"CNT\ud83c\udfe2", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("Form", u"CNT", None));
         ___qtablewidgetitem10 = self.tabla_rest.item(4, 0)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("Form", u"4", None));
         ___qtablewidgetitem11 = self.tabla_rest.item(4, 1)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("Form", u"Donde Coco\ud83c\udf5b", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("Form", u"Donde Coco", None));
         ___qtablewidgetitem12 = self.tabla_rest.item(5, 0)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("Form", u"5", None));
         ___qtablewidgetitem13 = self.tabla_rest.item(5, 1)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("Form", u"La Cocina de Consuelo\ud83c\udf5a", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("Form", u"La Cocina de Consuelo", None));
         ___qtablewidgetitem14 = self.tabla_rest.item(6, 0)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("Form", u"6", None));
         ___qtablewidgetitem15 = self.tabla_rest.item(6, 1)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("Form", u"Universidad PUCE\ud83c\udfec", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("Form", u"Universidad PUCE", None));
         ___qtablewidgetitem16 = self.tabla_rest.item(7, 0)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("Form", u"7", None));
         ___qtablewidgetitem17 = self.tabla_rest.item(7, 1)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("Form", u"Mandayan Chill & Fest\ud83c\udf72", None));
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("Form", u"Mandayan Chill & Fest", None));
         ___qtablewidgetitem18 = self.tabla_rest.item(8, 0)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("Form", u"8", None));
         ___qtablewidgetitem19 = self.tabla_rest.item(8, 1)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("Form", u"Santo Moro Grill\ud83e\udd90", None));
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("Form", u"Santo Moro Grill", None));
         ___qtablewidgetitem20 = self.tabla_rest.item(9, 0)
         ___qtablewidgetitem20.setText(QCoreApplication.translate("Form", u"9", None));
         ___qtablewidgetitem21 = self.tabla_rest.item(9, 1)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("Form", u"Universidad UTE\ud83c\udfec", None));
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("Form", u"Universidad UTE", None));
         ___qtablewidgetitem22 = self.tabla_rest.item(10, 0)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("Form", u"10", None));
         ___qtablewidgetitem23 = self.tabla_rest.item(10, 1)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("Form", u"Parrilladas Oh que rico\ud83e\udd53", None));
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("Form", u"Parrilladas Oh que rico", None));
         ___qtablewidgetitem24 = self.tabla_rest.item(11, 0)
         ___qtablewidgetitem24.setText(QCoreApplication.translate("Form", u"11", None));
         ___qtablewidgetitem25 = self.tabla_rest.item(11, 1)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("Form", u"Mr. Pincho\ud83e\udd53", None));
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("Form", u"Mr. Pincho", None));
         ___qtablewidgetitem26 = self.tabla_rest.item(12, 0)
         ___qtablewidgetitem26.setText(QCoreApplication.translate("Form", u"12", None));
         ___qtablewidgetitem27 = self.tabla_rest.item(12, 1)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("Form", u"Margarita\ud83c\udf71", None));
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("Form", u"Margarita", None));
         ___qtablewidgetitem28 = self.tabla_rest.item(13, 0)
         ___qtablewidgetitem28.setText(QCoreApplication.translate("Form", u"13", None));
         ___qtablewidgetitem29 = self.tabla_rest.item(13, 1)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("Form", u"KFC\ud83c\udf57\ud83c\udf5f", None));
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("Form", u"KFC", None));
         ___qtablewidgetitem30 = self.tabla_rest.item(14, 0)
         ___qtablewidgetitem30.setText(QCoreApplication.translate("Form", u"14", None));
         ___qtablewidgetitem31 = self.tabla_rest.item(14, 1)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("Form", u"El Rinc\u00f3n del Che\ud83c\udf5a", None));
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("Form", u"El Rinc\u00f3n del Che", None));
         ___qtablewidgetitem32 = self.tabla_rest.item(15, 0)
         ___qtablewidgetitem32.setText(QCoreApplication.translate("Form", u"15", None));
         ___qtablewidgetitem33 = self.tabla_rest.item(15, 1)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("Form", u"Universidad ESPE\ud83c\udfec", None));
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("Form", u"Universidad ESPE", None));
         ___qtablewidgetitem34 = self.tabla_rest.item(16, 0)
         ___qtablewidgetitem34.setText(QCoreApplication.translate("Form", u"16", None));
         ___qtablewidgetitem35 = self.tabla_rest.item(16, 1)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("Form", u"Conchal Chabelita\ud83e\udd90", None));
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("Form", u"Conchal Chabelita", None));
         ___qtablewidgetitem36 = self.tabla_rest.item(17, 0)
         ___qtablewidgetitem36.setText(QCoreApplication.translate("Form", u"17", None));
         ___qtablewidgetitem37 = self.tabla_rest.item(17, 1)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("Form", u"El Menestron\ud83c\udf5b", None));
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("Form", u"El Menestron", None));
         ___qtablewidgetitem38 = self.tabla_rest.item(18, 0)
         ___qtablewidgetitem38.setText(QCoreApplication.translate("Form", u"18", None));
         ___qtablewidgetitem39 = self.tabla_rest.item(18, 1)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("Form", u"Pizza Hurt\ud83c\udf55", None));
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("Form", u"Pizza Hurt", None));
         ___qtablewidgetitem40 = self.tabla_rest.item(19, 0)
         ___qtablewidgetitem40.setText(QCoreApplication.translate("Form", u"19", None));
         ___qtablewidgetitem41 = self.tabla_rest.item(19, 1)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("Form", u"Municipio\ud83c\udfe2", None));
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("Form", u"Municipio", None));
         ___qtablewidgetitem42 = self.tabla_rest.item(20, 0)
         ___qtablewidgetitem42.setText(QCoreApplication.translate("Form", u"20", None));
         ___qtablewidgetitem43 = self.tabla_rest.item(20, 1)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("Form", u"La Cuchara Brava\ud83c\udf72", None));
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("Form", u"La Cuchara Brava", None));
         ___qtablewidgetitem44 = self.tabla_rest.item(21, 0)
         ___qtablewidgetitem44.setText(QCoreApplication.translate("Form", u"21", None));
         ___qtablewidgetitem45 = self.tabla_rest.item(21, 1)
-        ___qtablewidgetitem45.setText(QCoreApplication.translate("Form", u"Legends Food & Drinks \ud83c\udf5f", None));
+        ___qtablewidgetitem45.setText(QCoreApplication.translate("Form", u"Legends Food & Drinks ", None));
         ___qtablewidgetitem46 = self.tabla_rest.item(22, 0)
         ___qtablewidgetitem46.setText(QCoreApplication.translate("Form", u"22", None));
         ___qtablewidgetitem47 = self.tabla_rest.item(22, 1)
-        ___qtablewidgetitem47.setText(QCoreApplication.translate("Form", u"Super Pollo\ud83c\udf57", None));
+        ___qtablewidgetitem47.setText(QCoreApplication.translate("Form", u"Super Pollo", None));
         ___qtablewidgetitem48 = self.tabla_rest.item(23, 0)
         ___qtablewidgetitem48.setText(QCoreApplication.translate("Form", u"23", None));
         ___qtablewidgetitem49 = self.tabla_rest.item(23, 1)
-        ___qtablewidgetitem49.setText(QCoreApplication.translate("Form", u"Papa John's Pizza\ud83c\udf5f", None));
+        ___qtablewidgetitem49.setText(QCoreApplication.translate("Form", u"Papa John's Pizza", None));
         ___qtablewidgetitem50 = self.tabla_rest.item(24, 0)
         ___qtablewidgetitem50.setText(QCoreApplication.translate("Form", u"24", None));
         ___qtablewidgetitem51 = self.tabla_rest.item(24, 1)
-        ___qtablewidgetitem51.setText(QCoreApplication.translate("Form", u"Supermercado AKI\ud83c\udfec", None));
+        ___qtablewidgetitem51.setText(QCoreApplication.translate("Form", u"Supermercado AKI", None));
         ___qtablewidgetitem52 = self.tabla_rest.item(25, 0)
         ___qtablewidgetitem52.setText(QCoreApplication.translate("Form", u"25", None));
         ___qtablewidgetitem53 = self.tabla_rest.item(25, 1)
-        ___qtablewidgetitem53.setText(QCoreApplication.translate("Form", u"La Pizzeria\ud83c\udf55", None));
+        ___qtablewidgetitem53.setText(QCoreApplication.translate("Form", u"La Pizzeria", None));
         self.tabla_rest.setSortingEnabled(__sortingEnabled)
 
         self.btn_limpiar.setText(QCoreApplication.translate("Form", u"Limpiar", None))
@@ -480,4 +481,3 @@ class Ui_Form(object):
         self.label_3.setText(QCoreApplication.translate("Form", u"Ruta para ir al restaurante:", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("Form", u"Recorrido Restaurante", None))
     # retranslateUi
-
