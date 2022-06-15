@@ -1,33 +1,19 @@
 from restaurantes_grafo import Grafo
 import unittest
 
-#pruebas unittest 
+#pruebas unittest
 class TestGrafo(unittest.TestCase):
-
-
+    """
+    Clase para pruebas unitarias de la clase Grafo.
+    """
     def test_grafo(self):
-
-        # Creamos un grafo dirigido
-        grafo = Grafo(dirigido=True)
-
-        # Creamos una lista de restaurantes
-
         """
-        Main de la clase Grafo.
-
-        Parámetros
-        ----------
-            None
-
-        Retorna
-        --------
-            None
-        
+        Prueba unitaria para la clase Grafo.
         """
         #Diccionario
         restaurantes = {0:"McDonald's🍔",1:"Pizzeria El Hornero🍕",2:"Casa Bambú🍱",3:"CNT🏢",4:"Donde Coco🍛",5:"La Cocina de Consuelo🍚",
         6:"Universidad PUCE🏬",7:"Mandayan Chill & Fest🍲", 8:"Santo Moro Grill🦐", 9:"Universidad UTE🏬", 10:"Parrilladas Oh que rico🥓",
-        11:"Mr. Pincho🥓", 12:"Margarita🍱", 13:"KFC🍗🍟", 14:"El Rincón del Che🍚", 15:"Universidad ESPE🏬", 16:"Conchal Chabelita🦐", 
+        11:"Mr. Pincho🥓", 12:"Margarita🍱", 13:"KFC🍗🍟", 14:"El Rincón del Che🍚", 15:"Universidad ESPE🏬", 16:"Conchal Chabelita🦐",
         17:"El Menestron🍛", 18:"Pizza Hurt🍕", 19:"Municipio🏢",20:"La Cuchara Brava🍲",21:"Legends Food & Drinks 🍟",22:"Super Pollo🍗",
         23:"Papa John's Pizza🍟",24:"Supermercado AKI🏬", 25:"La Pizzeria🍕"}
 
@@ -70,9 +56,12 @@ class TestGrafo(unittest.TestCase):
         #Se llama al metodo imprimir_grafo para visualizar el grafo
         grafo.imprimir_grafo()
 
-        #Se llama al metodo recorrido_dfs para visualizar el recorrido
-        print("\nRecorrido para llegar al restaurante 🍽️: ")
-        grafo.recorrido_dfs(0, 25, restaurantes)
+
+        self.assertEqual(grafo.recorrido_dfs(3, 12, ruta = [], nodo_visitado= set()),['CNT🏢', 'Casa Bambú🍱', 'Santo Moro Grill🦐', 'Universidad UTE🏬', 'Parrilladas Oh que rico🥓', 'Margarita🍱'])
+        self.assertEqual(grafo.recorrido_dfs(6, 13, ruta = [], nodo_visitado= set()),['Universidad PUCE🏬', 'Casa Bambú🍱', 'CNT🏢', 'Pizzeria El Hornero🍕', "McDonald's🍔", 'Donde Coco🍛', 'La Cocina de Consuelo🍚', 'Parrilladas Oh que rico🥓', 'Universidad UTE🏬', 'Santo Moro Grill🦐', 'Mandayan Chill & Fest🍲', 'Universidad ESPE🏬', 'El Rincón del Che🍚', 'KFC🍗🍟'])
+        self.assertEqual(grafo.recorrido_dfs(15, 18, ruta = [], nodo_visitado= set()),['Universidad ESPE🏬', 'El Rincón del Che🍚', 'KFC🍗🍟', 'Conchal Chabelita🦐', 'Pizza Hurt🍕'])
+
+        
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(argv=['ignored', '-v'], exit=False)
