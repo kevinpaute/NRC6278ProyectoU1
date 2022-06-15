@@ -1,5 +1,6 @@
 
  # Se imprime el resultado del robot
+
 from validacion_entrada import *
 import emoji
 
@@ -54,8 +55,6 @@ def robot_tapa_gol():
                         print("Futbolista🧍🏻 patea el balón ⚽ al arco ", ubicacion, " 🥅")
                         #El estado del arco se pone en 1
                         estado_meta[ubicacion] = '1'
-                        #Se suma 1 al costo
-                        costo += 1
                         #Imprime mensaje de el robot tape el gol
                         print("El robot🤖 no tapa el balón ⚽")
                         print("El futbolista anota gol 🥇")
@@ -78,6 +77,7 @@ def robot_tapa_gol():
                                     #Si el estado es 1 se suma 1 al costo
                                     if estado_arco == '1':
                                         print("\nFutbolista🧍🏻 patea el balón⚽ al arco ", arcos[i], " 🥅")
+                                        #Imprime mensaje que el robot se mueve
                                         print("El robot🤖 se mueve al arco ", arcos[i], " 🥅")
                                         costo += 1
                                         print("Costo del movimiento: ", costo)
@@ -86,6 +86,7 @@ def robot_tapa_gol():
                                         costo += 1
                                         #Imprime mensaje de el robot tapa el gol
                                         print("El robot🤖 tapa el balón⚽ ")
+                                        #Imprime mensaje de el futbolista no anota gol
                                         print("El futbolista no anota un gol 🤔")
                                         print("Costo del movimiento: ", costo)
                                     elif estado_arco == '0':
@@ -95,7 +96,6 @@ def robot_tapa_gol():
                                         print("Costo del movimiento: ", costo)
                                         #El estado del arco se pone en 1
                                         estado_meta[arcos[i]] = '1'
-                                        costo += 1
                                         #Imprime mensaje de el robot tape el gol
                                         print("El robot🤖 no tapa el balón⚽")
                                         #Imprime mensaje de el robot tape el gol
@@ -114,5 +114,10 @@ def robot_tapa_gol():
         else:
             print("Ingrese una ubicacion valido")
 
-#Llamada al metodo robot_tapa_gol
 robot_tapa_gol()
+
+
+
+
+
+

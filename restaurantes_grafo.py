@@ -269,4 +269,6 @@ if __name__ == "__main__":
             continue
     #Se llama al metodo recorrido_dfs para visualizar el recorrido
     print("\nRecorrido para llegar al restaurante 🍽️: ")
-    grafo.recorrido_dfs(nodo_inicio, nodo_objetivo, [])
+    grafo.recorrido_dfs(nodo_inicio, nodo_objetivo)
+
+
